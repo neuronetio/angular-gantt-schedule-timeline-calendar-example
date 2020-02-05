@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-root",
   template:
-    '<div><button (click)="changeFrom()">change from</button><gstc [config]="config" [onState]="onState.bind(this)"></gstc></div>'
+    '<div><button (click)="changeFrom()">change from</button><gstc [config]="config" (onState)="onState($event)"></gstc></div>'
 })
 export class AppComponent implements OnInit {
   title = "ng-gstc-test";
