@@ -2,7 +2,8 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-root",
-  template: '<gstc [config]="config" [onState]="onState"></gstc>'
+  template:
+    '<div><button (click)="changeFrom()">change from</button><gstc [config]="config" [onState]="onState.bind(this)"></gstc></div>'
 })
 export class AppComponent implements OnInit {
   title = "ng-gstc-test";
@@ -84,6 +85,7 @@ export class AppComponent implements OnInit {
 
   onState(state) {
     this.gstcState = state;
+    console.log(this);
 
     // YOU CAN SUBSCRIBE TO CHANGES
 
@@ -104,5 +106,10 @@ export class AppComponent implements OnInit {
       },
       { bulk: true }
     );
+  }
+
+  changeFrom() {
+    const from = new Date().getTime() + 24 * 60 * 60 * 1000 * 4;
+    this.gstcState.update("config.chart.time.from", from);
   }
 }
