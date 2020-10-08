@@ -1,6 +1,6 @@
 {
-  "name": "ng-gantt-schedule-timeline-calendar",
-  "version": "3.0.1",
+  "name": "angular-gantt-schedule-timeline-calendar-example",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
