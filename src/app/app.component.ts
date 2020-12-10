@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
       rows[id] = {
         id,
         label: 'Room ' + i,
-        parentId: withParent ? (i - 1).toString() : undefined,
+        parentId: withParent ? GSTC.api.GSTCID((i - 1).toString()) : undefined,
         expanded: false,
       };
     }
