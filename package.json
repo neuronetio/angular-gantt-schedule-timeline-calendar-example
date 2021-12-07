@@ -1,6 +1,6 @@
 {
   "name": "angular-gantt-schedule-timeline-calendar-example",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "scripts": {
     "ng": "ng",
     "start": "export NODE_OPTIONS=--openssl-legacy-provider; ng serve",
