@@ -5,9 +5,13 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import GSTC, { Config, GSTCResult } from 'gantt-schedule-timeline-calendar';
-import { Plugin as TimelinePointer } from 'gantt-schedule-timeline-calendar/dist/plugins/timeline-pointer.esm.min.js';
-import { Plugin as Selection } from 'gantt-schedule-timeline-calendar/dist/plugins/selection.esm.min.js';
+// import GSTC, { Config, GSTCResult } from 'gantt-schedule-timeline-calendar';
+// import { Plugin as TimelinePointer } from 'gantt-schedule-timeline-calendar/dist/plugins/timeline-pointer.esm.min.js';
+// import { Plugin as Selection } from 'gantt-schedule-timeline-calendar/dist/plugins/selection.esm.min.js';
+
+import GSTC, { Config, GSTCResult } from '../../../gstc-public';
+import { Plugin as TimelinePointer } from '../../../gstc-public/dist/plugins/timeline-pointer.esm.min.js';
+import { Plugin as Selection } from '../../../gstc-public/dist/plugins/selection.esm.min.js';
 
 @Component({
   selector: 'app-root',
@@ -93,10 +97,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const state = GSTC.api.stateFromConfig(this.generateConfig());
+    globalThis.state = state;
     this.gstc = GSTC({
       element: this.gstcElement.nativeElement,
-      state: GSTC.api.stateFromConfig(this.generateConfig()),
+      state,
     });
+    globalThis.gstc = this.gstc;
   }
 
   updateFirstItem(): void {
