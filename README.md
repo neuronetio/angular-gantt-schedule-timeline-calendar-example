@@ -4,6 +4,9 @@
 
 **TIP**: enable `"skipLibCheck": true,` and `exclude:["node_modules/**"]` in your `tsconfig.json` to get rid of all typescript errors from third party libraries.
 
+[skipLibCheck](https://github.com/neuronetio/angular-gantt-schedule-timeline-calendar-example/blob/master/tsconfig.json#L6)
+[exclude](https://github.com/neuronetio/angular-gantt-schedule-timeline-calendar-example/blob/master/tsconfig.json#L3)
+
 <br/><br/><br/>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
