@@ -19,7 +19,7 @@
     "@angular/platform-browser": "^12.2.12",
     "@angular/platform-browser-dynamic": "^12.2.12",
     "@angular/router": "^12.2.12",
-    "gantt-schedule-timeline-calendar": "^3.40.0",
+    "gantt-schedule-timeline-calendar": "^3.40.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
